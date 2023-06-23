@@ -7,5 +7,8 @@ out = subprocess.getoutput(cmd)
 list = json.loads(out)
 
 for item in list:
-    if item['Class'] == "USB" and item['FriendlyName'] == "USB 인쇄 지원":
-        pprint(item, indent=2)
+    try:
+        if item['FriendlyName'].find("SATO") > -1:
+            print(item)
+    except Exception as e:
+        pass

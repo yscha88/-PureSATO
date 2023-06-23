@@ -57,3 +57,10 @@ def get_extend_sato_data() -> dict:
 
     return sato
 
+
+if __name__ == "__main__":
+    from pprint import pprint
+    pprint(
+        get_extend_sato_data(),
+        indent=2
+    )
